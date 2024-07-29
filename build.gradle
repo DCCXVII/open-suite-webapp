@@ -144,4 +144,8 @@ task checkXmlImportsAttributes(type: CheckXmlImportsAttributes) {
 
 task checkXml(dependsOn: ['checkXmlDomainsAttributes','checkXmlViewsAttributes', 'checkXmlImportsAttributes'])
 
+task stage {
+    dependsOn build
+}
+
 build.finalizedBy archiveReports
